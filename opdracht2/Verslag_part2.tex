@@ -16,9 +16,6 @@
 
 \maketitle
 
-\section*{Inleiding}
-
-Inleidende tekst.
 
 \section{Deel A}
 \begin{enumerate}
@@ -64,14 +61,20 @@ Inleidende tekst.
 	\item Bij het uitwerken van leagues is er ook een verschil. In de modeloplossing is een league enkel een attribuut van de relatie tussen team en jaar. Wij zagen een league als een entiteit die als attribuut dan het jaartal had. 
 	League niet als entiteit nemen is minimalistischer en heeft dus de voorkeur.
 
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=5cm]{verschil5.jpg}
+	\includegraphics[width=10cm]{verschil5_model}
+	\caption{Verschil 5}
+	\label{fig:verschil5}
+\end{figure}
+
+	\item awardedTo is in de modeloplossing een ternaire relatie, met het entiteit jaar. Dit is een betere oplossing dan de onze waarbij het jaar werd bijgehouden omdat zo geen 2 primary keys nodig zijn.
+	
 	
 	
 \end{enumerate}
 
-
-
-\section*{Besluit}
-
-Afsluitende tekst
+\section{Deel B}
 
 \end{document}
