@@ -1,0 +1,77 @@
+\documentclass[a4paper,kulak]{kulakarticle}
+
+\usepackage[utf8]{inputenc}
+\usepackage[dutch]{babel}
+
+\date{Academiejaar 2017-2018}
+\address{
+  Informatica \\
+  Gegevensbanken \\
+  Professor Bettina Berendt\\
+  Dr. Bart Bogaerts}
+\title{Verslag opdracht 2}
+\author{Thomas Bamelis, Michiel Jonckheere, Jaron Maene}
+
+\begin{document}
+
+\maketitle
+
+\section*{Inleiding}
+
+Inleidende tekst.
+
+\section{Deel A}
+\begin{enumerate}
+		\begin{figure}[!htb]
+			\centering
+			\includegraphics[width=4cm]{verschil1_model}
+			\caption{Verschil 1}
+			\label{fig:verschil1}
+		\end{figure}
+	\item Het grootste verschil tussen ons diagram en dat van de modeloplossing is dat wij geen gebruik maakten van een entiteit jaar. Hierdoor zijn enkele gevraagde uitwerkingen bij ons niet mogelijk, zoals het bijhouden van jaarstatistieken van een speler. Dit probleem losten we op door in de assumpties aan te halen dat het enkel mogelijk is om jaarstatistieken af te leiden van de statistieken die een speler had in een team. Deze assumptie is niet zo realistisch, want als een speler in één jaar bij meerdere teams speelt, is het moeilijk jaarstatistieken af te leiden over deze verschillende statistieken van de teams.\\
+	In onze uitwerking houden we het jaartal telkens bij als attribuut van een entiteit of relatie. \\
+	Echter was op onze manier het schema wat minder 'spaghetti`.
+	
+		\begin{figure}[!htb]
+			\centering
+			\includegraphics[width=4cm]{verschil2}
+			\includegraphics[width=4cm]{verschil2_model}
+			\caption{Verschil 2}
+			\label{fig:verschil2}
+		\end{figure}
+	\item Een tweede verschil is de uitwerking van seriespost. Aangezien wij geen entiteit jaar aanmaakten, moesten we dit anders uitwerken. Bij ons heeft elke league een relatie met seriespost, die op zijn beurt per jaar bijhoudt wie de globale winnaar en verliezer is. Hierbij is het wel nodig dat gecontroleerd wordt of het jaar van de league en seriespost telkens overeenkomt. \\
+	Als toch wordt gewerkt met een entiteit jaar, wordt deze oplossing natuurlijk verkozen.
+	
+		\begin{figure}[!htb]
+			\centering
+			\includegraphics[width=4cm]{verschil3}
+			\includegraphics[width=6cm]{verschil3_model}
+			\caption{Verschil 3}
+			\label{fig:verschil3}
+		\end{figure}
+	\item In onze uitwerking kozen we voor een zwakke entiteit die de geschiedenis van de speler bijhoudt. Hierdoor is het mogelijk om eventueel nog andere entiteiten aan te maken die hiermee in relatie staan, een voorbeeld kan zijn de medische geschiedenis van de speler. Dit is duidelijk slechter als er geen enkel ander aspect over de geschiedenis werd bijgehouden.
+	Echter werd in de opgave aangegeven dat 'onder andere` de studies werden bijgehouden. 
+	Maar zelfs moest er meer bijgehouden worden zou het zelfs nog beter zijn omdat het eigenlijk weinig zin heeft om deze te scheiden.
+	
+	
+		\begin{figure}[!htb]
+			\centering
+			\includegraphics[width=5cm]{verschil4}
+			\includegraphics[width=5cm]{verschil4_model}
+			\caption{Verschil 4}
+			\label{fig:verschil4}
+		\end{figure}
+	\item Bij het uitwerken van leagues is er ook een verschil. In de modeloplossing is een league enkel een attribuut van de relatie tussen team en jaar. Wij zagen een league als een entiteit die als attribuut dan het jaartal had. 
+	League niet als entiteit nemen is minimalistischer en heeft dus de voorkeur.
+
+	
+	
+\end{enumerate}
+
+
+
+\section*{Besluit}
+
+Afsluitende tekst
+
+\end{document}
